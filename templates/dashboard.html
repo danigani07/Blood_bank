@@ -1,9 +1,0 @@
-<h1>Welcome, {{ user[0] }}</h1>
-<h2>Your Blood Type: {{ user[2] }}</h2>
-
-<h3>Pending Requests for Your Blood Type:</h3>
-<ul>
-    {% for request in requests %}
-    <li>{{ request[2] }} - {{ request[3] }} - {{ request[4] }} | <a href="/respond/{{ request[1] }}/{{ request[0] }}">Respond</a></li>
-    {% endfor %}
-</ul>
