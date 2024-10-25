@@ -1,6 +1,14 @@
 class Config:
-    SECRET_KEY = 'your_secret_key'  # Use a strong secret key
-    MYSQL_HOST = '3306'  # Use '127.0.0.1' if necessary
-    MYSQL_USER = 'root'  # Your MySQL username
-    MYSQL_PASSWORD = 'mysql123'  # Your MySQL password
-    MYSQL_DB = 'blood_bankDB'  # Your MySQL database name
+    SECRET_KEY = 'password'  # Replace with your actual secret key
+    MYSQL_HOST = 'bloodbank-db.clacek8ey7ty.us-east-1.rds.amazonaws.com'
+    MYSQL_USER = 'admin'  # Your MySQL username
+    MYSQL_PASSWORD = 'bloodbank12345'  # Your MySQL password
+    MYSQL_DB = 'blood_bankdb'  # Your MySQL database name
+
+    # Add a DB_CONFIG attribute to hold database connection parameters
+    DB_CONFIG = {
+        'host': MYSQL_HOST,
+        'user': MYSQL_USER,
+        'password': MYSQL_PASSWORD,
+        'database': MYSQL_DB
+    }
