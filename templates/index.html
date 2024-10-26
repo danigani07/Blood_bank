@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Welcome to the Blood Donation Platform</h1>
+        <img src="{{ url_for('static', filename='img3.avif') }}" alt="Blood Donation" />
+        <p>Join us in saving lives by donating blood. Every drop counts!</p>
+        <a class="btn" href="/register">Register</a>
+        <a class="btn" href="/login">Login</a>
+    </div>
+    <footer>
+        <p>© 2024 Blood Donation Platform. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

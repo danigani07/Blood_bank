@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Blood Donation Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <form method="POST" class="form">
+            <h1>Register</h1>
+            <input type="text" name="fullname" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="text" name="blood_type" placeholder="Blood Type" required>
+            <button type="submit">Register</button>
+        </form>
+        <div class="info-box">
+            <h2>Donate Blood, Save Lives</h2>
+            <p>Be a part of the solution. Register to donate blood and help save lives today.</p>
+            <img src="{{ url_for('static', filename='img1.webp') }}" alt="Blood Bag Image">
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 Blood Donation Platform</p>
+    </footer>
+</body>
+</html>

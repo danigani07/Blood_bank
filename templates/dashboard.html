@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body style="background-color: #f8f9fa;">
+    <div class="container mt-5">
+        <h1 class="text-center">Welcome, {{ user[0] }}</h1>
+        <h2 class="text-center">Your Blood Type: {{ user[2] }}</h2>
+        <h3 class="mt-4">Pending Requests for Your Blood Type:</h3>
+        <ul class="list-group">
+            {% for request in requests %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    {{ request[2] }} - {{ request[3] }} - {{ request[4] }}
+                    <a href="/respond/{{ request[1] }}/{{ request[0] }}" class="btn btn-info">Respond</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="text-center mt-4">
+            <a href="/" class="btn btn-secondary">Home</a>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

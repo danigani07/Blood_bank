@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Blood Donation Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <form method="POST" class="form">
+            <h1>Login</h1>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <div class="info-box">
+            <h2>Save Lives Today</h2>
+            <p>Your blood donation can make a world of difference. Join our community of heroes and donate today!</p>
+            <img src="{{ url_for('static', filename='img2.jpg') }}" alt="Blood Donation Image">
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 Blood Donation Platform</p>
+    </footer>
+</body>
+</html>
